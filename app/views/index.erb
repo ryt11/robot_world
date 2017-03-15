@@ -1,1 +1,20 @@
 <h1>My Robots</h1>
+
+<%@robots.each do |robot|%>
+<a href='robots/<%=robot.id%>'>
+  <h2><%=robot.name%>:</h2>
+  <img src="https://robohash.org/<%=robot.name%>">
+  </a>
+  <ul style='list-style:none'>
+    <li>Location: <%=robot.city%>, <%= robot.state %></li>
+      </br>
+    <li>Department: <%=robot.department%></li>
+  </ul>
+
+  <a href="robots/<%= robot.id %>/edit">Edit</a> | <a href="robots/<%= robot.id %>/delete">Delete</a>
+<% end %>
+
+<br>
+<a href='robots/new'>
+  <button type="submit" > Create New Robot</button>
+</a>

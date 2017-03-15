@@ -1,0 +1,13 @@
+<form action='/robots/<%= @robot.id%>' method="post">
+  <h1>Edit</h1>
+  <input type="hidden" name="_method" value="PUT" />
+  <label>Name: </label>
+  <input type="text" name="robot[name]"/>
+  <label>City: </label>
+  <input type="text" name="robot[city]"/>
+  <label>State: </label>
+  <input type="text" name="robot[state]"/>
+  <label>Department: </label>
+  <input type="text" name="robot[department]"/>
+  <input type="submit"/>
+</form>

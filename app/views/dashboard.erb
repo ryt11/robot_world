@@ -1,0 +1,19 @@
+<h1>Total Robots: <%=@robots.count%></h1>
+<br>
+
+  <h1>Cities</h1>
+  <%@city_stats.each do |k, v|%>
+    <li>Total in <%= k %>: <%=v.count%></li>
+    <br>
+  <% end %>
+  <h1>States</h1>
+  <%@state_stats.each do |k, v|%>
+    <li>Total in <%= k %>: <%=v.count%></li>
+    <br>
+  <% end %>
+  <h1>Departments</h1>
+  <%@dep_stats.each do |k, v|%>
+      <li>Total in <%= k %> Department: <%=v.count%></li>
+
+    <br>
+  <% end %>
