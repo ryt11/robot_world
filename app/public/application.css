@@ -1,0 +1,45 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+
+
+body {
+  background-color: gray;
+}
+
+.header_text {
+  margin: 0 auto;
+  font-family: Raleway;
+}
+.header {
+  background-color: mediumspringgreen;
+  height:85px;
+  width:100%;
+  border-radius:15px;
+  border:3px solid black;
+  text-align: center;
+}
+
+.pic_wrapper {
+  border:3px solid black;
+  margin-top: 30px;
+}
+
+li {
+  color:gray;
+  font-size: 20px;
+  font-family: Raleway;
+  vertical-align: middle;
+
+}
+
+.a_modifier {
+  color:white;
+}
+
+.edit_btn_adjust {
+  float:right;
+}
+
+.delete_btn_adjust {
+  float:right;
+}

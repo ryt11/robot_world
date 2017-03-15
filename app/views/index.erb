@@ -1,20 +1,37 @@
-<h1>My Robots</h1>
 
-<%@robots.each do |robot|%>
-<a href='robots/<%=robot.id%>'>
-  <h2><%=robot.name%>:</h2>
-  <img src="https://robohash.org/<%=robot.name%>">
-  </a>
-  <ul style='list-style:none'>
-    <li>Location: <%=robot.city%>, <%= robot.state %></li>
-      </br>
-    <li>Department: <%=robot.department%></li>
-  </ul>
+    <div class="header">
+      <h1 class="header_text">My Robots</h1>
+    </div>
 
-  <a href="robots/<%= robot.id %>/edit">Edit</a> | <a href="robots/<%= robot.id %>/delete">Delete</a>
-<% end %>
 
-<br>
-<a href='robots/new'>
-  <button type="submit" > Create New Robot</button>
-</a>
+    <%@robots.each do |robot|%>
+    <a href='robots/<%=robot.id%>'>
+      <div class="name_wrapper">
+        <h2><%=robot.name%>:</h2>
+      </div>
+      <div class="pic_wrapper">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="https://robohash.org/<%=robot.name%>">
+          </div>
+
+          <div class="col-md-5">
+            <ul style='list-style:none'>
+              <li>Location: <%=robot.city%>, <%= robot.state %></li>
+                </br>
+              <li>Department: <%=robot.department%></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+              <button type="button" class="btn btn-danger delete_btn_adjust"name="button"><a class="a_modifier"href="robots/<%= robot.id %>/delete">Delete</a></button>
+              <button type="button" class="btn btn-danger edit_btn_adjust"name="button"><a class="a_modifier" href="robots/<%= robot.id %>/edit">Edit</a></button>
+          </div>
+        </div>
+      </div>
+
+    <% end %>
+
+    <br>
+    <a href='robots/new'>
+      <button class ="btn btn-primary"type="submit" >Create New Robot</button>
+    </a>
